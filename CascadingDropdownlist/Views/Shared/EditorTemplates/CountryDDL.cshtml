@@ -1,0 +1,8 @@
+﻿@using CascadingDropdownlist.ViewModels.Students
+
+@Html.DropDownList("", new SelectList(StudentViewModel.GetAllCountries(), "Value", "Text", ViewData["Country"]), string.Empty,
+    new
+    {
+        @class = "form-control",
+        @onchange = "document.forms[0].submit();"
+    })

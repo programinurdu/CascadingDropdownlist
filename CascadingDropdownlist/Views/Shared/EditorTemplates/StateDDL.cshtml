@@ -1,0 +1,9 @@
+﻿@using CascadingDropdownlist.ViewModels.Students
+
+@Html.DropDownList("", new SelectList(StudentViewModel.GetStatesAccordingToCountries(Convert.ToInt32(ViewData["CountryId"])), "Value", "Text", ViewData["State"]), string.Empty,
+    new
+    {
+        @class = "form-control",
+        @disabled = "disabled",
+        @onchange = "document.forms[0].submit();"
+    })
